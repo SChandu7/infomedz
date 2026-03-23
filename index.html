@@ -1,0 +1,1123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Privacy Policy — InfoMedZ</title>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --orange: #FF6B00;
+      --orange-light: #FF8C33;
+      --orange-pale: #FFF3EB;
+      --blue: #1565C0;
+      --blue-light: #1976D2;
+      --blue-pale: #E8F0FB;
+      --red: #E53935;
+      --red-pale: #FEECEC;
+      --white: #FFFFFF;
+      --off-white: #FAFAFA;
+      --surface: #F7F4F0;
+      --text-primary: #1A1A2E;
+      --text-secondary: #4B5563;
+      --text-muted: #9CA3AF;
+      --border: #E8E2DA;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--off-white);
+      color: var(--text-primary);
+      line-height: 1.7;
+      overflow-x: hidden;
+    }
+
+    /* ── HERO HEADER ── */
+    .hero {
+      background: linear-gradient(135deg, #1A237E 0%, #1565C0 55%, #0D47A1 100%);
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      width: 600px; height: 600px;
+      border-radius: 50%;
+      background: rgba(255,107,0,0.10);
+      top: -200px; right: -150px;
+      pointer-events: none;
+    }
+    .hero::after {
+      content: '';
+      position: absolute;
+      width: 400px; height: 400px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.04);
+      bottom: -150px; left: -100px;
+      pointer-events: none;
+    }
+
+    .hero-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 64px 40px 56px;
+    }
+
+    .logo-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 36px;
+    }
+    .logo-icon {
+      width: 48px; height: 48px;
+      background: white;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    }
+    .logo-text {
+      font-family: 'DM Serif Display', serif;
+      font-size: 26px;
+      color: white;
+      letter-spacing: -0.3px;
+    }
+    .logo-text span { color: var(--orange-light); }
+
+    .hero-tag {
+      display: inline-block;
+      background: rgba(255,107,0,0.20);
+      border: 1px solid rgba(255,107,0,0.35);
+      color: #FFB580;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 20px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-family: 'DM Serif Display', serif;
+      font-size: clamp(36px, 6vw, 56px);
+      color: white;
+      line-height: 1.08;
+      letter-spacing: -1px;
+      margin-bottom: 18px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--orange-light);
+    }
+
+    .hero-sub {
+      color: rgba(255,255,255,0.70);
+      font-size: 16px;
+      font-weight: 300;
+      max-width: 540px;
+      line-height: 1.65;
+      margin-bottom: 32px;
+    }
+
+    .hero-meta {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .meta-pill {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 8px;
+      padding: 7px 14px;
+      color: rgba(255,255,255,0.80);
+      font-size: 12px;
+      font-weight: 500;
+    }
+    .meta-pill .dot {
+      width: 7px; height: 7px;
+      border-radius: 50%;
+    }
+
+    /* ── STICKY NAV ── */
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255,255,255,0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 40px;
+    }
+    .sticky-nav-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .sticky-nav-inner::-webkit-scrollbar { display: none; }
+    .nav-link {
+      flex-shrink: 0;
+      display: block;
+      padding: 14px 16px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--text-secondary);
+      text-decoration: none;
+      letter-spacing: 0.2px;
+      border-bottom: 2px solid transparent;
+      transition: color 0.2s, border-color 0.2s;
+      white-space: nowrap;
+    }
+    .nav-link:hover { color: var(--orange); border-bottom-color: var(--orange); }
+
+    /* ── LAYOUT ── */
+    .page-wrapper {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 56px 40px 80px;
+    }
+
+    /* ── INTRO CARD ── */
+    .intro-card {
+      background: white;
+      border-radius: 20px;
+      padding: 36px 40px;
+      margin-bottom: 48px;
+      border: 1px solid var(--border);
+      position: relative;
+      overflow: hidden;
+    }
+    .intro-card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 4px;
+      background: linear-gradient(180deg, var(--orange), var(--blue));
+    }
+    .intro-card p {
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+    .intro-card p + p { margin-top: 14px; }
+    .intro-card strong { color: var(--text-primary); font-weight: 600; }
+
+    /* ── SECTION ── */
+    .section {
+      margin-bottom: 48px;
+      animation: fadeUp 0.5s ease both;
+    }
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+    .section-icon {
+      flex-shrink: 0;
+      width: 48px; height: 48px;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px;
+    }
+    .section-title-wrap {}
+    .section-number {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 3px;
+    }
+    .section-title {
+      font-family: 'DM Serif Display', serif;
+      font-size: 24px;
+      color: var(--text-primary);
+      line-height: 1.2;
+      letter-spacing: -0.3px;
+    }
+
+    .section-body {
+      background: white;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+    }
+
+    .section-body p,
+    .section-body li {
+      color: var(--text-secondary);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+    .section-body p { padding: 20px 28px 0; }
+    .section-body p:last-child { padding-bottom: 24px; }
+
+    .section-body ul,
+    .section-body ol {
+      padding: 0 28px 24px 52px;
+    }
+    .section-body ul { list-style: none; padding-left: 28px; }
+    .section-body ul li {
+      position: relative;
+      padding: 5px 0 5px 22px;
+    }
+    .section-body ul li::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 13px;
+      width: 8px; height: 8px;
+      border-radius: 50%;
+    }
+
+    /* ── CARD GRID (for data types, rights, etc.) ── */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 14px;
+      padding: 24px;
+    }
+    .info-card {
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .info-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+    }
+    .info-card .card-icon { font-size: 24px; margin-bottom: 10px; }
+    .info-card .card-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 5px;
+    }
+    .info-card .card-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight-box {
+      margin: 20px 24px;
+      padding: 18px 22px;
+      border-radius: 12px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    .highlight-box.orange {
+      background: var(--orange-pale);
+      border-left: 3px solid var(--orange);
+      color: #7A3500;
+    }
+    .highlight-box.blue {
+      background: var(--blue-pale);
+      border-left: 3px solid var(--blue);
+      color: #0D3272;
+    }
+    .highlight-box.red {
+      background: var(--red-pale);
+      border-left: 3px solid var(--red);
+      color: #7A1515;
+    }
+    .highlight-box strong {
+      font-weight: 700;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    /* ── TABLE ── */
+    .policy-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    .policy-table th {
+      background: var(--surface);
+      padding: 12px 16px;
+      text-align: left;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      border-bottom: 1px solid var(--border);
+    }
+    .policy-table td {
+      padding: 14px 16px;
+      color: var(--text-secondary);
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .policy-table tr:last-child td { border-bottom: none; }
+    .policy-table tr:hover td { background: var(--off-white); }
+    .policy-table td:first-child {
+      font-weight: 600;
+      color: var(--text-primary);
+      width: 35%;
+    }
+    .badge {
+      display: inline-block;
+      padding: 2px 9px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 600;
+    }
+    .badge-orange { background: var(--orange-pale); color: var(--orange); }
+    .badge-blue   { background: var(--blue-pale);   color: var(--blue); }
+    .badge-red    { background: var(--red-pale);     color: var(--red); }
+
+    /* ── RIGHTS GRID ── */
+    .rights-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1px;
+      background: var(--border);
+      overflow: hidden;
+      border-radius: 0 0 16px 16px;
+    }
+    .right-item {
+      background: white;
+      padding: 22px 24px;
+      transition: background 0.2s;
+    }
+    .right-item:hover { background: var(--off-white); }
+    .right-item .right-icon { font-size: 20px; margin-bottom: 8px; }
+    .right-item .right-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 5px;
+    }
+    .right-item .right-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      line-height: 1.55;
+    }
+
+    /* ── CONTACT FOOTER ── */
+    .contact-section {
+      background: linear-gradient(135deg, #1A237E 0%, #1565C0 100%);
+      border-radius: 20px;
+      padding: 44px 48px;
+      margin-top: 56px;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+    .contact-section::after {
+      content: '';
+      position: absolute;
+      width: 300px; height: 300px;
+      border-radius: 50%;
+      background: rgba(255,107,0,0.10);
+      right: -80px; bottom: -100px;
+      pointer-events: none;
+    }
+    .contact-section h2 {
+      font-family: 'DM Serif Display', serif;
+      font-size: 28px;
+      margin-bottom: 12px;
+      letter-spacing: -0.4px;
+    }
+    .contact-section p {
+      color: rgba(255,255,255,0.75);
+      font-size: 15px;
+      margin-bottom: 28px;
+      max-width: 480px;
+      line-height: 1.65;
+    }
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 14px;
+      position: relative; z-index: 1;
+    }
+    .contact-card {
+      background: rgba(255,255,255,0.10);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 14px;
+      padding: 18px 20px;
+      transition: background 0.2s;
+    }
+    .contact-card:hover { background: rgba(255,255,255,0.16); }
+    .contact-card .cc-label {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.50);
+      margin-bottom: 5px;
+    }
+    .contact-card .cc-value {
+      font-size: 14px;
+      font-weight: 600;
+      color: white;
+    }
+    .contact-card .cc-sub {
+      font-size: 12px;
+      color: rgba(255,255,255,0.60);
+      margin-top: 2px;
+    }
+
+    /* ── FOOTER BAR ── */
+    .footer-bar {
+      text-align: center;
+      padding: 32px 40px 48px;
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+    .footer-bar a { color: var(--orange); text-decoration: none; }
+    .footer-bar a:hover { text-decoration: underline; }
+
+    /* ── DIVIDER ── */
+    hr.divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 0 24px;
+    }
+
+    /* ── ANIMATIONS ── */
+    .section { animation-delay: 0.05s; }
+    .section:nth-child(2) { animation-delay: 0.10s; }
+    .section:nth-child(3) { animation-delay: 0.15s; }
+    .section:nth-child(4) { animation-delay: 0.20s; }
+    .section:nth-child(5) { animation-delay: 0.25s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 640px) {
+      .hero-inner, .page-wrapper { padding: 40px 20px; }
+      .sticky-nav { padding: 0 20px; }
+      .rights-grid { grid-template-columns: 1fr; }
+      .contact-section { padding: 32px 24px; }
+      .section-body p { padding: 16px 20px 0; }
+      .section-body ul { padding-left: 20px; }
+      .card-grid { grid-template-columns: 1fr 1fr; }
+      .hero h1 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ HERO ══ -->
+<header class="hero">
+  <div class="hero-inner">
+    <div class="logo-mark">
+      <div class="logo-icon">⚕</div>
+      <div class="logo-text">Info<span>MedZ</span></div>
+    </div>
+    <div class="hero-tag">Legal Document</div>
+    <h1>Privacy <em>Policy</em></h1>
+    <p class="hero-sub">We are committed to protecting your personal and medical information with the highest standards of security, transparency, and care.</p>
+    <div class="hero-meta">
+      <div class="meta-pill"><span class="dot" style="background:#34D399"></span> Effective: January 1, 2025</div>
+      <div class="meta-pill"><span class="dot" style="background:#FF8C33"></span> Last Updated: March 23, 2026</div>
+      <div class="meta-pill"><span class="dot" style="background:#60A5FA"></span> Version 2.1</div>
+    </div>
+  </div>
+</header>
+
+<!-- ══ STICKY NAV ══ -->
+<nav class="sticky-nav">
+  <div class="sticky-nav-inner">
+    <a href="#overview"     class="nav-link">Overview</a>
+    <a href="#data"         class="nav-link">Data We Collect</a>
+    <a href="#use"          class="nav-link">How We Use It</a>
+    <a href="#sharing"      class="nav-link">Data Sharing</a>
+    <a href="#security"     class="nav-link">Security</a>
+    <a href="#retention"    class="nav-link">Retention</a>
+    <a href="#rights"       class="nav-link">Your Rights</a>
+    <a href="#children"     class="nav-link">Children</a>
+    <a href="#cookies"      class="nav-link">Cookies</a>
+    <a href="#changes"      class="nav-link">Changes</a>
+    <a href="#contact"      class="nav-link">Contact</a>
+  </div>
+</nav>
+
+<!-- ══ MAIN CONTENT ══ -->
+<main class="page-wrapper">
+
+  <!-- INTRO -->
+  <div class="intro-card">
+    <p>Welcome to <strong>InfoMedZ</strong> — the unified healthcare platform connecting patients, doctors, nurses, pharmacies, diagnostic labs, hospitals, and clinics across India. This Privacy Policy explains how InfoMedZ Technologies Pvt. Ltd. ("<strong>InfoMedZ</strong>", "<strong>we</strong>", "<strong>our</strong>", or "<strong>us</strong>") collects, uses, discloses, and safeguards your information when you use our mobile application, web platform, and related services (collectively, the "<strong>Platform</strong>").</p>
+    <p>By accessing or using InfoMedZ, you agree to the practices described in this Policy. If you do not agree, please discontinue use of the Platform. This policy applies to all users — patients, healthcare providers, pharmacy operators, and lab technicians.</p>
+  </div>
+
+  <!-- ── 1. OVERVIEW ── -->
+  <section class="section" id="overview">
+    <div class="section-header">
+      <div class="section-icon" style="background:#FFF3EB;">🏥</div>
+      <div class="section-title-wrap">
+        <div class="section-number">Section 01</div>
+        <h2 class="section-title">Overview &amp; Scope</h2>
+      </div>
+    </div>
+    <div class="section-body">
+      <p>InfoMedZ operates as a <strong>regulated healthcare technology platform</strong> subject to applicable Indian data protection laws including the Information Technology Act, 2000, the IT (Amendment) Act, 2008, the Digital Personal Data Protection Act, 2023 (DPDP Act), and relevant Ministry of Health guidelines.</p>
+      <p>This Policy applies to:</p>
+      <ul>
+        <li style="--dot-color: var(--orange)">All registered users — patients, doctors, nurses, physiotherapists, dentists, dieticians</li>
+        <li>Healthcare provider organisations — hospitals, clinics, diagnostic labs, pharmacies, surgical supply shops</li>
+        <li>Visitors who browse the Platform without registering</li>
+        <li>Any person who communicates with InfoMedZ via chat, email, or support channels</li>
+      </ul>
+      <div class="highlight-box blue">
+        <strong>HIPAA &amp; Data Sensitivity Notice</strong>
+        Medical and health data collected on this Platform is treated as <em>sensitive personal data</em> under Indian law and receives the highest level of protection. We do not sell your health data under any circumstances.
+      </div>
+      <p style="padding-bottom: 24px;">This Policy does not apply to third-party websites linked from the Platform. We recommend reviewing their respective privacy policies independently.</p>
+    </div>
+  </section>
+
+  <!-- ── 2. DATA WE COLLECT ── -->
+  <section class="section" id="data">
+    <div class="section-header">
+      <div class="section-icon" style="background:#E8F0FB;">📊</div>
+      <div class="section-title-wrap">
+        <div class="section-number">Section 02</div>
+        <h2 class="section-title">Information We Collect</h2>
+      </div>
+    </div>
+    <div class="section-body">
+      <p>We collect information in three ways: directly from you, automatically through your use of the Platform, and from third parties such as healthcare providers or diagnostic labs.</p>
+      <div class="card-grid">
+        <div class="info-card">
+          <div class="card-icon">👤</div>
+          <div class="card-title">Identity Data</div>
+          <div class="card-desc">Full name, date of birth, gender, profile photo, government ID (optional)</div>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">📞</div>
+          <div class="card-title">Contact Data</div>
+          <div class="card-desc">Email address, phone number, postal address, emergency contact</div>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">🩺</div>
+          <div class="card-title">Health &amp; Medical Data</div>
+          <div class="card-desc">Blood group, diagnoses, prescriptions, lab reports, vitals, allergies, chronic conditions</div>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">📅</div>
+          <div class="card-title">Appointment Data</div>
+          <div class="card-desc">Booking history, doctor consultations, teleconsult recordings (with consent)</div>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">💊</div>
+          <div class="card-title">Transaction Data</div>
+          <div class="card-desc">Medicine orders, lab test bookings, payment records (no full card data stored)</div>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">📍</div>
+          <div class="card-title">Location Data</div>
+          <div class="card-desc">GPS location (with permission) to find nearby hospitals, labs, pharmacies</div>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">📱</div>
+          <div class="card-title">Device &amp; Usage Data</div>
+          <div class="card-desc">Device type, OS, IP address, app usage patterns, crash reports</div>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">💬</div>
+          <div class="card-title">Communication Data</div>
+          <div class="card-desc">Chat messages with doctors, support tickets, feedback and reviews</div>
+        </div>
+      </div>
+      <p>For <strong>Healthcare Provider accounts</strong> (doctors, nurses, pharmacies, labs, hospitals), we additionally collect: professional registration numbers, medical license details, qualifications, bank/UPI details for payouts, and GST/PAN information.</p>
+    </div>
+  </section>
+
+  <!-- ── 3. HOW WE USE IT ── -->
+  <section class="section" id="use">
+    <div class="section-header">
+      <div class="section-icon" style="background:#FFF3EB;">⚙️</div>
+      <div class="section-title-wrap">
+        <div class="section-number">Section 03</div>
+        <h2 class="section-title">How We Use Your Information</h2>
+      </div>
+    </div>
+    <div class="section-body">
+      <div style="overflow-x:auto">
+        <table class="policy-table">
+          <thead>
+            <tr>
+              <th>Purpose</th>
+              <th>Data Used</th>
+              <th>Legal Basis</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Provide and operate the Platform</td>
+              <td>Identity, contact, health data</td>
+              <td><span class="badge badge-orange">Contract</span></td>
+            </tr>
+            <tr>
+              <td>Appointment booking &amp; management</td>
+              <td>Identity, health, appointment data</td>
+              <td><span class="badge badge-orange">Contract</span></td>
+            </tr>
+            <tr>
+              <td>Medicine ordering &amp; delivery</td>
+              <td>Identity, contact, transaction data</td>
+              <td><span class="badge badge-orange">Contract</span></td>
+            </tr>
+            <tr>
+              <td>Lab test booking &amp; report delivery</td>
+              <td>Health, contact, transaction data</td>
+              <td><span class="badge badge-orange">Contract</span></td>
+            </tr>
+            <tr>
+              <td>Teleconsultation (video/chat)</td>
+              <td>Health, communication data</td>
+              <td><span class="badge badge-blue">Consent</span></td>
+            </tr>
+            <tr>
+              <td>Medical record storage</td>
+              <td>Health data, uploaded files</td>
+              <td><span class="badge badge-blue">Consent</span></td>
+            </tr>
+            <tr>
+              <td>Doctor matching &amp; recommendations</td>
+              <td>Location, health, usage data</td>
+              <td><span class="badge badge-orange">Legitimate Interest</span></td>
+            </tr>
+            <tr>
+              <td>Fraud prevention &amp; security</td>
+              <td>Device, usage, identity data</td>
+              <td><span class="badge badge-orange">Legitimate Interest</span></td>
+            </tr>
+            <tr>
+              <td>Platform improvement &amp; analytics</td>
+              <td>Anonymised usage data</td>
+              <td><span class="badge badge-orange">Legitimate Interest</span></td>
+            </tr>
+            <tr>
+              <td>Marketing communications</td>
+              <td>Contact, usage data</td>
+              <td><span class="badge badge-blue">Consent</span></td>
+            </tr>
+            <tr>
+              <td>Legal &amp; regulatory compliance</td>
+              <td>Any relevant data</td>
+              <td><span class="badge badge-red">Legal Obligation</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="highlight-box orange" style="margin-top: 0;">
+        <strong>No AI Training on Health Data</strong>
+        We do not use your identifiable health or medical data to train AI or machine learning models. Aggregate and fully anonymised statistical data may be used for platform improvements only.
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 4. SHARING ── -->
+  <section class="section" id="sharing">
+    <div class="section-header">
+      <div class="section-icon" style="background:#FEECEC;">🔗</div>
+      <div class="section-title-wrap">
+        <div class="section-number">Section 04</div>
+        <h2 class="section-title">Data Sharing &amp; Disclosure</h2>
+      </div>
+    </div>
+    <div class="section-body">
+      <p>We do not sell, rent, or trade your personal information. We share data only in the following limited circumstances:</p>
+      <ul>
+        <li><strong>Healthcare Providers:</strong> Your medical data is shared with doctors, nurses, pharmacists, or lab technicians only as necessary to provide the specific service you request. Shared data is governed by confidentiality obligations.</li>
+        <li><strong>Service Partners:</strong> Payment processors (Razorpay, PayU), cloud infrastructure (AWS, Google Cloud), SMS/email providers (Twilio, SendGrid) — all under data processing agreements with strict data protection obligations.</li>
+        <li><strong>Insurance Partners:</strong> With your explicit consent, for cashless claims or health insurance integration.</li>
+        <li><strong>Research &amp; Public Health:</strong> Only aggregated, de-identified data may be shared with government health authorities (e.g., ICMR, MoHFW) as required by law or for public health surveillance.</li>
+        <li><strong>Legal Requirements:</strong> We may disclose information when required by court order, law enforcement request, or to comply with applicable Indian law.</li>
+        <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, user data may be transferred. We will notify you and allow you to opt out where legally possible.</li>
+      </ul>
+      <div class="highlight-box red">
+        <strong>Explicit Prohibition</strong>
+        InfoMedZ strictly prohibits sharing your health or personal data with pharmaceutical companies, advertisers, data brokers, or any commercial third party for marketing purposes without your clear, informed, and revocable consent.
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 5. SECURITY ── -->
+  <section class="section" id="security">
+    <div class="section-header">
+      <div class="section-icon" style="background:#E8F0FB;">🔐</div>
+      <div class="section-title-wrap">
+        <div class="section-number">Section 05</div>
+        <h2 class="section-title">Data Security</h2>
+      </div>
+    </div>
+    <div class="section-body">
+      <p>We implement industry-standard and healthcare-grade security measures to protect your data from unauthorised access, alteration, disclosure, or destruction:</p>
+      <div class="card-grid" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));">
+        <div class="info-card">
+          <div class="card-icon">🔒</div>
+          <div class="card-title">AES-256 Encryption</div>
+          <div class="card-desc">All health records and sensitive data encrypted at rest</div>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">🌐</div>
+          <div class="card-title">TLS 1.3 in Transit</div>
+          <div class="card-desc">All communications encrypted over HTTPS/TLS</div>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">🧱</div>
+          <div class="card-title">Firewall &amp; WAF</div>
+          <div class="card-desc">Enterprise-grade web application firewall &amp; DDoS protection</div>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">🔑</div>
+          <div class="card-title">2FA Authentication</div>
+          <div class="card-desc">Two-factor authentication for all accounts</div>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">🕵️</div>
+          <div class="card-title">Security Audits</div>
+          <div class="card-desc">Regular penetration testing and third-party security audits</div>
+        </div>
+        <div class="info-card">
+          <div class="card-icon">📋</div>
+          <div class="card-title">Access Controls</div>
+          <div class="card-desc">Role-based access — staff can only access data relevant to their role</div>
+        </div>
+      </div>
+      <div class="highlight-box blue">
+        <strong>Data Breach Protocol</strong>
+        In the event of a data breach affecting your personal data, we will notify you and the relevant authorities within 72 hours of becoming aware, as required under the DPDP Act, 2023.
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 6. RETENTION ── -->
+  <section class="section" id="retention">
+    <div class="section-header">
+      <div class="section-icon" style="background:#FFF3EB;">🗂️</div>
+      <div class="section-title-wrap">
+        <div class="section-number">Section 06</div>
+        <h2 class="section-title">Data Retention</h2>
+      </div>
+    </div>
+    <div class="section-body">
+      <div style="overflow-x:auto">
+        <table class="policy-table">
+          <thead>
+            <tr>
+              <th>Data Type</th>
+              <th>Retention Period</th>
+              <th>Reason</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Medical records &amp; prescriptions</td>
+              <td>7 years (or as required by MCI/NMC guidelines)</td>
+              <td>Legal &amp; medical regulatory obligation</td>
+            </tr>
+            <tr>
+              <td>Appointment history</td>
+              <td>5 years after last appointment</td>
+              <td>Medical continuity &amp; legal claims</td>
+            </tr>
+            <tr>
+              <td>Lab test reports</td>
+              <td>7 years</td>
+              <td>Clinical reference &amp; regulatory</td>
+            </tr>
+            <tr>
+              <td>Transaction &amp; payment records</td>
+              <td>8 years</td>
+              <td>GST, Income Tax, financial regulations</td>
+            </tr>
+            <tr>
+              <td>Chat &amp; consultation messages</td>
+              <td>3 years</td>
+              <td>Medical liability &amp; dispute resolution</td>
+            </tr>
+            <tr>
+              <td>Account &amp; profile data</td>
+              <td>Duration of account + 2 years post-deletion</td>
+              <td>Fraud prevention &amp; regulatory</td>
+            </tr>
+            <tr>
+              <td>Device &amp; usage logs</td>
+              <td>90 days rolling</td>
+              <td>Security &amp; abuse prevention</td>
+            </tr>
+            <tr>
+              <td>Marketing consent records</td>
+              <td>Until consent withdrawn + 1 year</td>
+              <td>Consent audit trail</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="padding-bottom: 24px;">When data is no longer required, it is securely deleted or anonymised using industry-standard methods.</p>
+    </div>
+  </section>
+
+  <!-- ── 7. YOUR RIGHTS ── -->
+  <section class="section" id="rights">
+    <div class="section-header">
+      <div class="section-icon" style="background:#FFF3EB;">⚖️</div>
+      <div class="section-title-wrap">
+        <div class="section-number">Section 07</div>
+        <h2 class="section-title">Your Rights &amp; Choices</h2>
+      </div>
+    </div>
+    <div class="section-body">
+      <p>Under the Digital Personal Data Protection Act, 2023 and applicable law, you have the following rights regarding your personal data:</p>
+      <div class="rights-grid">
+        <div class="right-item">
+          <div class="right-icon">👁️</div>
+          <div class="right-title">Right to Access</div>
+          <div class="right-desc">Request a copy of all personal data we hold about you at any time.</div>
+        </div>
+        <div class="right-item">
+          <div class="right-icon">✏️</div>
+          <div class="right-title">Right to Correction</div>
+          <div class="right-desc">Correct inaccurate or incomplete personal data. Update via your profile or support request.</div>
+        </div>
+        <div class="right-item">
+          <div class="right-icon">🗑️</div>
+          <div class="right-title">Right to Erasure</div>
+          <div class="right-desc">Request deletion of your data, subject to our legal retention obligations and ongoing services.</div>
+        </div>
+        <div class="right-item">
+          <div class="right-icon">📦</div>
+          <div class="right-title">Right to Portability</div>
+          <div class="right-desc">Receive your medical records and personal data in a portable, machine-readable format.</div>
+        </div>
+        <div class="right-item">
+          <div class="right-icon">🚫</div>
+          <div class="right-title">Right to Object</div>
+          <div class="right-desc">Object to processing of your data for marketing, profiling, or non-essential purposes.</div>
+        </div>
+        <div class="right-item">
+          <div class="right-icon">⏸️</div>
+          <div class="right-title">Right to Restriction</div>
+          <div class="right-desc">Request restriction of processing while a dispute or complaint is being resolved.</div>
+        </div>
+        <div class="right-item">
+          <div class="right-icon">🔄</div>
+          <div class="right-title">Withdraw Consent</div>
+          <div class="right-desc">Withdraw previously given consent for optional data processing at any time, with immediate effect.</div>
+        </div>
+        <div class="right-item">
+          <div class="right-icon">📣</div>
+          <div class="right-title">Right to Grievance</div>
+          <div class="right-desc">File a complaint with our Data Protection Officer or the Data Protection Board of India.</div>
+        </div>
+      </div>
+      <div class="highlight-box orange" style="margin-top: 20px; border-radius: 0 0 12px 12px;">
+        <strong>How to Exercise Your Rights</strong>
+        Submit a request via the app under <em>Profile → Privacy &amp; Security → Data Requests</em>, or email our Data Protection Officer at <strong>dpo@infomedz.in</strong>. We respond within <strong>30 days</strong> as required by law.
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 8. CHILDREN ── -->
+  <section class="section" id="children">
+    <div class="section-header">
+      <div class="section-icon" style="background:#FEECEC;">👶</div>
+      <div class="section-title-wrap">
+        <div class="section-number">Section 08</div>
+        <h2 class="section-title">Children's Privacy</h2>
+      </div>
+    </div>
+    <div class="section-body">
+      <p>InfoMedZ is designed for users aged <strong>18 years and above</strong>. We understand that children also need healthcare services, and accordingly:</p>
+      <ul>
+        <li>Children under 18 may use InfoMedZ only with a parent or legal guardian's account and explicit consent</li>
+        <li>A parent or guardian must create the account and accept this Privacy Policy on behalf of a minor</li>
+        <li>We do not knowingly collect personal data directly from children under 13 without verified parental consent</li>
+        <li>Paediatric healthcare data is subject to the same or stricter protections as adult health data</li>
+        <li>Parents or guardians may request access, correction, or deletion of their child's data at any time</li>
+      </ul>
+      <div class="highlight-box red">
+        <strong>Parental Control</strong>
+        If you believe your child has provided personal information without your consent, contact us immediately at <strong>privacy@infomedz.in</strong> and we will promptly delete such data.
+      </div>
+    </div>
+  </section>
+
+  <!-- ── 9. COOKIES ── -->
+  <section class="section" id="cookies">
+    <div class="section-header">
+      <div class="section-icon" style="background:#E8F0FB;">🍪</div>
+      <div class="section-title-wrap">
+        <div class="section-number">Section 09</div>
+        <h2 class="section-title">Cookies &amp; Tracking</h2>
+      </div>
+    </div>
+    <div class="section-body">
+      <p>The InfoMedZ web platform uses cookies and similar tracking technologies. Our mobile application uses device identifiers and analytics SDKs.</p>
+      <div style="overflow-x:auto">
+        <table class="policy-table">
+          <thead>
+            <tr>
+              <th>Cookie Type</th>
+              <th>Purpose</th>
+              <th>Can Opt Out</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Essential / Strictly Necessary</td>
+              <td>Login sessions, security, platform functionality</td>
+              <td><span class="badge badge-red">No — Required</span></td>
+            </tr>
+            <tr>
+              <td>Functional</td>
+              <td>Remember preferences, language, region settings</td>
+              <td><span class="badge badge-blue">Yes</span></td>
+            </tr>
+            <tr>
+              <td>Analytics</td>
+              <td>Usage statistics, crash reporting (Google Analytics, Firebase)</td>
+              <td><span class="badge badge-blue">Yes</span></td>
+            </tr>
+            <tr>
+              <td>Marketing / Advertising</td>
+              <td>Personalised health service recommendations (opt-in only)</td>
+              <td><span class="badge badge-blue">Yes — opt-in only</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="padding-bottom: 24px;">You can manage cookie preferences at any time through <em>Settings → Privacy → Cookie Preferences</em> on the web platform. Withdrawing consent for non-essential cookies will not affect Platform functionality.</p>
+    </div>
+  </section>
+
+  <!-- ── 10. CHANGES ── -->
+  <section class="section" id="changes">
+    <div class="section-header">
+      <div class="section-icon" style="background:#FFF3EB;">🔔</div>
+      <div class="section-title-wrap">
+        <div class="section-number">Section 10</div>
+        <h2 class="section-title">Changes to This Policy</h2>
+      </div>
+    </div>
+    <div class="section-body">
+      <p>We may update this Privacy Policy periodically to reflect changes in our practices, technology, legal requirements, or for other operational reasons. When we make material changes:</p>
+      <ul>
+        <li>We will notify registered users via in-app notification and email at least <strong>14 days</strong> before changes take effect</li>
+        <li>The "Last Updated" date at the top of this Policy will be revised</li>
+        <li>For significant changes affecting your rights or how we use health data, we will seek renewed consent where required by law</li>
+        <li>Previous versions of this Policy are archived and available upon request</li>
+      </ul>
+      <p>Your continued use of InfoMedZ after the effective date constitutes acceptance of the revised Policy. If you do not agree with the changes, you may delete your account before the changes take effect.</p>
+    </div>
+  </section>
+
+  <!-- ── CONTACT ── -->
+  <div class="contact-section" id="contact">
+    <h2>Contact &amp; Grievance</h2>
+    <p>For privacy-related questions, data requests, or to file a complaint, reach our Data Protection Officer or support team. We are committed to resolving all privacy concerns within 30 days.</p>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <div class="cc-label">Data Protection Officer</div>
+        <div class="cc-value">dpo@infomedz.in</div>
+        <div class="cc-sub">Privacy requests &amp; rights</div>
+      </div>
+      <div class="contact-card">
+        <div class="cc-label">General Privacy</div>
+        <div class="cc-value">privacy@infomedz.in</div>
+        <div class="cc-sub">General data inquiries</div>
+      </div>
+      <div class="contact-card">
+        <div class="cc-label">Support</div>
+        <div class="cc-value">support@infomedz.in</div>
+        <div class="cc-sub">Platform &amp; account issues</div>
+      </div>
+      <div class="contact-card">
+        <div class="cc-label">Registered Address</div>
+        <div class="cc-value">InfoMedZ Technologies Pvt. Ltd.</div>
+        <div class="cc-sub">Hyderabad, Telangana, India — 500001</div>
+      </div>
+      <div class="contact-card">
+        <div class="cc-label">Grievance Hotline</div>
+        <div class="cc-value">1800-XXX-XXXX</div>
+        <div class="cc-sub">Mon–Sat, 9 AM – 6 PM IST</div>
+      </div>
+      <div class="contact-card">
+        <div class="cc-label">Regulatory Authority</div>
+        <div class="cc-value">Data Protection Board of India</div>
+        <div class="cc-sub">dpboard.gov.in</div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<!-- ══ FOOTER BAR ══ -->
+<footer class="footer-bar">
+  <p>© 2025–2026 InfoMedZ Technologies Pvt. Ltd. All rights reserved. &nbsp;·&nbsp; <a href="#">Terms of Service</a> &nbsp;·&nbsp; <a href="#">Cookie Policy</a> &nbsp;·&nbsp; <a href="#">Refund Policy</a></p>
+  <p style="margin-top: 8px;">Registered under the Companies Act, 2013 · CIN: U85100TG2024PTC000000 · GSTIN: 36AAAXX0000X1Z0</p>
+</footer>
+
+<script>
+  // Stagger section animations on scroll
+  const sections = document.querySelectorAll('.section');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.style.opacity = '1';
+        entry.target.style.transform = 'translateY(0)';
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08 });
+
+  sections.forEach(s => {
+    s.style.opacity = '0';
+    s.style.transform = 'translateY(24px)';
+    s.style.transition = 'opacity 0.55s ease, transform 0.55s ease';
+    observer.observe(s);
+  });
+
+  // Active nav highlight on scroll
+  const navLinks = document.querySelectorAll('.nav-link');
+  const allSections = document.querySelectorAll('section[id], div[id]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    allSections.forEach(sec => {
+      const top = sec.offsetTop - 80;
+      if (window.scrollY >= top) current = sec.id;
+    });
+    navLinks.forEach(link => {
+      link.style.color = '';
+      link.style.borderBottomColor = '';
+      if (link.getAttribute('href') === '#' + current) {
+        link.style.color = 'var(--orange)';
+        link.style.borderBottomColor = 'var(--orange)';
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
